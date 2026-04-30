@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mr. Noodle AlmaZen · Asian Food & Take Away en el centro de Granada. Noodles frescos, dumplings y ramen artesanal.">
+  <title>Mr. Noodle AlmaZen · Asian Food & Take Away · Granada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="loading">
+
+  <!-- ── LOADER ── -->
+  <div id="loader">
+    <div class="loader-inner">
+      <img src="assets/logo.png" alt="Mr. Noodle AlmaZen" class="loader-logo-img">
+      <p class="loader-text">Asian Food &amp; Take Away · Granada</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ── CANVAS PÉTALOS ── -->
+  <canvas id="sakura-canvas"></canvas>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/logo.png" alt="Mr. Noodle AlmaZen" class="nav-logo-img">
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#concepto">Nosotros</a></li>
+      <li><a href="#tienda">Tienda</a></li>
+      <li><a href="#kasazen">KasaZen</a></li>
+      <li><a href="#instagram">Instagram</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="tel:668514054" class="nav-tel">668 514 054</a>
+    <button id="burger" class="burger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div id="hero-fallback" class="hero-video-fallback"></div>
+    <div class="hero-circle" aria-hidden="true"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Asian Food &amp; Take Away · Granada</span>
+      <h1 class="hero-title">
+        <span class="hero-line">Mr. Noodle</span>
+        <span class="hero-line hero-line-jp">AlmaZen</span>
+      </h1>
+      <p class="hero-desc">Auténtica gastronomía oriental en el corazón de Granada</p>
+      <div class="hero-btns">
+        <a href="#tienda" class="btn-primary">Ver productos</a>
+        <a href="#contacto" class="btn-ghost">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ── -->
+  <div class="marquee-bar" aria-hidden="true">
+    <div class="marquee-track">
+      <span>RAMEN</span><span>·</span><span>DUMPLINGS</span><span>·</span>
+      <span>ONIGIRI</span><span>·</span><span>DIM SUM</span><span>·</span>
+      <span>Mr. Noodle AlmaZen</span><span>·</span>
+      <span>TAKE AWAY</span><span>·</span><span>GRANADA</span><span>·</span>
+      <span>NOODLES FRESCOS</span><span>·</span><span>RAMEN CASERO</span><span>·</span>
+      <span>RAMEN</span><span>·</span><span>DUMPLINGS</span><span>·</span>
+      <span>ONIGIRI</span><span>·</span><span>DIM SUM</span><span>·</span>
+      <span>Mr. Noodle AlmaZen</span><span>·</span>
+      <span>TAKE AWAY</span><span>·</span><span>GRANADA</span><span>·</span>
+      <span>NOODLES FRESCOS</span><span>·</span><span>RAMEN CASERO</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ── CONCEPTO ── -->
+  <section id="concepto" class="section section-dark">
+    <div class="container">
+      <div class="concepto-grid">
+        <div class="concepto-text">
+          <span class="tag-red">Nuestra historia</span>
+          <h2 class="concepto-title">El alma<br>del sabor oriental</h2>
+          <p>Mr. Noodle AlmaZen nace de la pasión por la cultura gastronómica japonesa y asiática. Un espacio donde los sabores auténticos del lejano oriente llegan al centro de Granada, elaborados con productos cuidadosamente seleccionados.</p>
+          <p>Noodles frescos, dumplings tradicionales, ramen artesanal, snacks japoneses y todo el menaje que necesitas para recrear la experiencia en casa. Más que un take-away, una ventana a otra cultura.</p>
+          <div class="concepto-pillars">
+            <div class="pillar">
+              <span class="pillar-icon">🍜</span>
+              <span class="pillar-label">Sabor auténtico</span>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🥟</span>
+              <span class="pillar-label">Hecho con alma</span>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🌸</span>
+              <span class="pillar-label">Espíritu zen</span>
+            </div>
+          </div>
+        </div>
+        <div class="concepto-visual">
+          <div class="concepto-img-wrap">
+            <img src="assets/concepto.jpg" alt="Mr. Noodle AlmaZen">
+            <div class="concepto-badge">
+              <img src="assets/gato-suerte.png" alt="Gato de la suerte Maneki-neko">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TIENDA ── -->
+  <section id="tienda" class="section section-dark">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag-red">Tienda Online</span>
+        <h2>Todos nuestros productos</h2>
+        <p>Haz clic en cualquier producto para ver más información · Recogida en tienda o envío a domicilio</p>
+      </div>
+
+      <!-- Banner gato decorativo -->
+      <div class="gato-banner">
+        <img src="assets/gato-suerte.png" alt="Gato de la suerte Maneki-neko">
+        <div class="gato-banner-text">
+          <p>"El gato de la suerte te da la bienvenida a nuestra tienda"</p>
+          <span>Productos importados directamente de Asia · Nuevas referencias cada semana</span>
+        </div>
+        <img src="assets/gato-cuencos-set.png" alt="Cuencos gato">
+      </div>
+
+      <!-- Navegación categorías -->
+      <div class="tienda-tabs-wrap">
+        <div class="tienda-tabs" id="tienda-nav"></div>
+      </div>
+
+      <!-- Paneles de productos (generados por JS) -->
+      <div id="tienda-panels"></div>
+
+      <div class="tienda-cta">
+        <p>¿No encuentras lo que buscas? Contáctanos o visítanos en Calle Campo Verde, 3 · Granada.</p>
+        <a href="tel:668514054" class="btn-primary">Llamar · 668 514 054</a>
+        <a href="tel:668514054" class="btn-ghost">Llamar · 668 514 054</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL PRODUCTO -->
+  <div id="prod-modal" class="pmodal" aria-hidden="true">
+    <div class="pmodal-backdrop"></div>
+    <div class="pmodal-box">
+      <button class="pmodal-close" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="pmodal-img-wrap">
+        <img id="pmodal-img" src="" alt="">
+      </div>
+      <div class="pmodal-info">
+        <span class="pmodal-cat" id="pmodal-cat"></span>
+        <h3 id="pmodal-name"></h3>
+        <p class="pmodal-price" id="pmodal-price"></p>
+        <p class="pmodal-desc" id="pmodal-desc"></p>
+        <a href="#contacto" class="btn-primary">Pedir información</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── KASAZEN ── -->
+  <section id="kasazen" class="section section-dark">
+    <div class="container">
+      <div class="kasazen-grid">
+        <div class="kasazen-text">
+          <span class="tag-red">La tienda</span>
+          <h2>KasaZen</h2>
+          <p class="kasazen-sub">Menaje y cultura asiática para tu hogar</p>
+          <p>Más que un take-away, AlmaZen es también una tienda especializada en productos y utensilios de la cultura asiática. Encuentra todo lo que necesitas para preparar tus platos favoritos en casa.</p>
+          <ul class="kasazen-list">
+            <li><span class="kz-dot"></span>Palillos y soportes</li>
+            <li><span class="kz-dot"></span>Cuencos y ramen bowls</li>
+            <li><span class="kz-dot"></span>Salsas y condimentos</li>
+            <li><span class="kz-dot"></span>Ingredientes especiales</li>
+            <li><span class="kz-dot"></span>Decoración y regalos</li>
+          </ul>
+          <a href="#tienda" class="btn-primary">Ver todos los productos</a>
+        </div>
+        <div class="kasazen-visual">
+          <img src="assets/kasazen-ejemplo.png" alt="Taza de té Hokusai - KasaZen" class="kasazen-main-img">
+          <div class="kasazen-float">
+            <img src="assets/gato-suerte.png" alt="Maneki Neko - Gato de la suerte">
+          </div>
+          <div class="kasazen-gatos">
+            <img src="assets/gato-cuenco-azul.png" alt="Cuenco gato azul">
+            <img src="assets/gato-cuenco-rosa.png" alt="Cuenco gato rosa">
+            <img src="assets/gato-palillos.png" alt="Gato soporte palillos">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INSTAGRAM ── -->
+  <section id="instagram" class="section section-dark">
+    <div class="container">
+      <div class="insta-header">
+        <div class="insta-logo">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </div>
+        <div>
+          <h2 class="insta-title">@mr_noodle_almazen</h2>
+          <p class="insta-sub">Síguenos para descubrir novedades, eventos y mucho más</p>
+        </div>
+        <a href="https://instagram.com/mr_noodle_almazen" target="_blank" rel="noopener" class="btn-ghost">Seguir</a>
+      </div>
+    </div>
+    <div class="insta-grid">
+      <a href="https://instagram.com/mr_noodle_almazen" target="_blank" rel="noopener" class="insta-item">
+        <img src="assets/productos/soba-pato.png" alt="Mr Noodle Instagram" loading="lazy">
+        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </a>
+      <a href="https://instagram.com/mr_noodle_almazen" target="_blank" rel="noopener" class="insta-item">
+        <img src="assets/productos/buldak-carbonara.png" alt="Mr Noodle Instagram" loading="lazy">
+        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </a>
+      <a href="https://instagram.com/mr_noodle_almazen" target="_blank" rel="noopener" class="insta-item">
+        <img src="assets/productos/nongshim.png" alt="Mr Noodle Instagram" loading="lazy">
+        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </a>
+      <a href="https://instagram.com/mr_noodle_almazen" target="_blank" rel="noopener" class="insta-item">
+        <img src="assets/productos/snack-komesan.png" alt="Mr Noodle Instagram" loading="lazy">
+        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </a>
+      <a href="https://instagram.com/mr_noodle_almazen" target="_blank" rel="noopener" class="insta-item">
+        <img src="assets/productos/galletas-shinchan.png" alt="Mr Noodle Instagram" loading="lazy">
+        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </a>
+      <a href="https://instagram.com/mr_noodle_almazen" target="_blank" rel="noopener" class="insta-item">
+        <img src="assets/productos/ocean-bomb.png" alt="Mr Noodle Instagram" loading="lazy">
+        <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </a>
+    </div>
+    <div class="container">
+      <div class="insta-footer">
+        <a href="https://instagram.com/mr_noodle_almazen" target="_blank" rel="noopener" class="insta-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Ver perfil completo en Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACTO ── -->
+  <section id="contacto" class="section section-ink">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag-red">Ubicación</span>
+        <h2>Encuéntranos</h2>
+        <p>En el corazón de Granada</p>
+      </div>
+      <div class="contacto-grid">
+        <div class="contacto-info">
+          <div class="cinfo-item">
+            <span class="cinfo-icon">📍</span>
+            <div>
+              <strong>Dirección</strong>
+              <span>Calle Campo Verde, 3</span>
+              <span>Centro, 18001 Granada</span>
+            </div>
+          </div>
+          <div class="cinfo-item">
+            <span class="cinfo-icon">📞</span>
+            <div>
+              <strong>Teléfono / WhatsApp</strong>
+              <a href="tel:668514054">668 514 054</a>
+            </div>
+          </div>
+          <div class="cinfo-item">
+            <span class="cinfo-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@mr-noodlealmazen.com">info@mr-noodlealmazen.com</a>
+            </div>
+          </div>
+          <div class="cinfo-item">
+            <span class="cinfo-icon">🕐</span>
+            <div>
+              <strong>Horario</strong>
+              <span>Consultar por teléfono</span>
+            </div>
+          </div>
+          <div class="cinfo-social">
+            <a href="https://instagram.com/mr_noodle_almazen" target="_blank" rel="noopener" class="social-pill">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61562998895159" target="_blank" rel="noopener" class="social-pill">Facebook</a>
+            <a href="https://www.youtube.com/@mr.noodlealmazen" target="_blank" rel="noopener" class="social-pill">YouTube</a>
+          </div>
+          <a href="https://maps.google.com/?q=Calle+Campo+Verde+3,+Granada" target="_blank" rel="noopener" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Cómo llegar
+          </a>
+        </div>
+        <div class="contacto-map">
+          <iframe
+            src="https://maps.google.com/maps?q=Calle+Campo+Verde+3,+Granada,+Spain&output=embed&hl=es&z=16"
+            width="100%" height="100%" style="border:0;" allowfullscreen
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Mr. Noodle AlmaZen ubicación"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Mr. Noodle AlmaZen" class="footer-logo-img">
+          <p class="footer-tagline">Asian Food &amp; Take Away · Granada</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="#concepto">Nosotros</a>
+          <a href="#tienda">Tienda</a>
+          <a href="#kasazen">KasaZen</a>
+          <a href="#instagram">Instagram</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="footer-contact">
+          <a href="tel:668514054">668 514 054</a>
+          <a href="mailto:info@mr-noodlealmazen.com">info@mr-noodlealmazen.com</a>
+          <span>Calle Campo Verde, 3 · Granada</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Mr. Noodle AlmaZen · Asian Food &amp; Take Away · Granada · <a href="https://mrnoodlealmazen.com/politica-de-privacidad/" target="_blank" rel="noopener">Privacidad</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
