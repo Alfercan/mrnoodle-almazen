@@ -1647,21 +1647,13 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(32px); }
+@keyframes cardEnterRight {
+  from { opacity: 0; transform: translateX(28px); }
   to   { opacity: 1; transform: translateX(0); }
 }
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-32px); }
+@keyframes cardEnterLeft {
+  from { opacity: 0; transform: translateX(-28px); }
   to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes slideOutLeft {
-  from { opacity: 1; transform: translateX(0); }
-  to   { opacity: 0; transform: translateX(-32px); }
-}
-@keyframes slideOutRight {
-  from { opacity: 1; transform: translateX(0); }
-  to   { opacity: 0; transform: translateX(32px); }
 }
 
 .resenas-grid {
@@ -1813,7 +1805,6 @@ footer {
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
-    animation: pageIn 0.35s ease;
   }
 
   /* Wrapper que da espacio a las flechas */
