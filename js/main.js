@@ -632,55 +632,73 @@ function initSmoothLinks() {
    Muestra 1 página de 3 reseñas, swipe para pasar
 ────────────────────────────────────────────── */
 function initResenasCarousel() {
-  const pages = Array.from(document.querySelectorAll('.resenas-page'));
-  if (!pages.length) return;
+  const cards = Array.from(document.querySelectorAll('.resena-card'));
+  if (!cards.length) return;
 
   let current = 0;
+  cards[0].classList.add('active');
 
-  /* Activar primera página */
-  pages[0].classList.add('active');
+  /* Envolver grid en slider-wrap */
+  const grid = document.querySelector('.resenas-grid');
+  const wrap = document.createElement('div');
+  wrap.className = 'resenas-slider-wrap';
+  grid.parentNode.insertBefore(wrap, grid);
+  wrap.appendChild(grid);
 
-  /* Crear dots */
+  /* Flechas */
+  const mkArrow = (cls, path) => {
+    const btn = document.createElement('button');
+    btn.className = 'resena-arrow ' + cls;
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="${path}"/></svg>`;
+    return btn;
+  };
+  const prevBtn = mkArrow('resena-arrow-prev', 'M15 18l-6-6 6-6');
+  const nextBtn = mkArrow('resena-arrow-next', 'M9 18l6-6-6-6');
+  prevBtn.setAttribute('aria-label', 'Anterior');
+  nextBtn.setAttribute('aria-label', 'Siguiente');
+  wrap.insertBefore(prevBtn, grid);
+  wrap.appendChild(nextBtn);
+
+  /* Dots */
   const dotsWrap = document.createElement('div');
   dotsWrap.className = 'resenas-dots';
-  pages.forEach((_, i) => {
+  cards.forEach((_, i) => {
     const d = document.createElement('button');
     d.className = 'resenas-dot' + (i === 0 ? ' active' : '');
-    d.setAttribute('aria-label', 'Página ' + (i + 1));
+    d.setAttribute('aria-label', 'Reseña ' + (i + 1));
     d.addEventListener('click', () => goTo(i));
     dotsWrap.appendChild(d);
   });
-  document.querySelector('.resenas-grid').after(dotsWrap);
+  wrap.after(dotsWrap);
 
-  function goTo(n) {
-    pages[current].classList.remove('active');
-    dotsWrap.children[current].classList.remove('active');
-    current = n;
-    pages[current].classList.add('active');
-    dotsWrap.children[current].classList.add('active');
+  function updateBtns() {
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === cards.length - 1;
   }
 
-  /* Detección de swipe táctil */
+  function goTo(n) {
+    cards[current].classList.remove('active');
+    dotsWrap.children[current].classList.remove('active');
+    current = n;
+    cards[current].classList.add('active');
+    dotsWrap.children[current].classList.add('active');
+    updateBtns();
+  }
+
+  prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+  nextBtn.addEventListener('click', () => { if (current < cards.length - 1) goTo(current + 1); });
+  updateBtns();
+
+  /* Swipe táctil */
   let startX = 0, startY = 0, moved = false;
-  const grid = document.querySelector('.resenas-grid');
-
-  grid.addEventListener('touchstart', e => {
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-    moved = false;
-  }, { passive: true });
-
-  grid.addEventListener('touchmove', e => {
-    moved = true;
-  }, { passive: true });
-
+  grid.addEventListener('touchstart', e => { startX = e.touches[0].clientX; startY = e.touches[0].clientY; moved = false; }, { passive: true });
+  grid.addEventListener('touchmove',  () => { moved = true; }, { passive: true });
   grid.addEventListener('touchend', e => {
     if (!moved) return;
     const dx = startX - e.changedTouches[0].clientX;
     const dy = Math.abs(startY - e.changedTouches[0].clientY);
-    /* Solo swipe horizontal limpio (no scroll vertical) */
     if (Math.abs(dx) > 45 && Math.abs(dx) > dy) {
-      if (dx > 0 && current < pages.length - 1) goTo(current + 1);
+      if (dx > 0 && current < cards.length - 1) goTo(current + 1);
       if (dx < 0 && current > 0) goTo(current - 1);
     }
   }, { passive: true });
