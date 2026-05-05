@@ -632,10 +632,8 @@ function initSmoothLinks() {
    Muestra 1 página de 3 reseñas, swipe para pasar
 ────────────────────────────────────────────── */
 function initResenasCarousel() {
-  if (window.innerWidth >= 768) return;
-
   const pages = Array.from(document.querySelectorAll('.resenas-page'));
-  if (pages.length < 2) return;
+  if (!pages.length) return;
 
   let current = 0;
 
