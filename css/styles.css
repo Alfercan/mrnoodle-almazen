@@ -1530,9 +1530,9 @@ footer {
   .kasazen-gatos img { height: 60px; width: auto; max-width: 30%; }
 
   /* Reseñas — carousel JS, 1 card por slide */
-  .resenas-grid   { display: block; margin-top: 1.5rem; }
-  .resena-card    { display: none; }
-  .resena-card.active { display: flex; animation: pageIn 0.35s ease; }
+  .resenas-grid        { display: block !important; margin-top: 1.5rem; }
+  .resena-card         { display: none !important; }
+  .resena-card.active  { display: flex !important; flex-direction: column; animation: pageIn 0.35s ease; }
   /* Wrapper para flechas */
   .resenas-slider-wrap { position: relative; padding: 0 2.75rem; }
   /* Flechas */
