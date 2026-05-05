@@ -188,6 +188,16 @@ function initScrollAnimations() {
     opacity: 0, scale: 0.9, duration: 0.6, stagger: 0.07, ease: 'power3.out'
   });
 
+  /* Reseñas */
+  gsap.from('.resena-card', {
+    scrollTrigger: { trigger: '.resenas-grid', start: 'top 85%' },
+    opacity: 0, y: 40, duration: 0.6, stagger: 0.12, ease: 'power3.out'
+  });
+  gsap.from('.resenas-global', {
+    scrollTrigger: { trigger: '.resenas-global', start: 'top 88%' },
+    opacity: 0, y: 20, duration: 0.8, ease: 'power3.out'
+  });
+
   /* Contacto */
   gsap.from('.cinfo-item', {
     scrollTrigger: { trigger: '.contacto-grid', start: 'top 82%' },
@@ -564,77 +574,21 @@ function initTabs() {
 }
 
 /* ──────────────────────────────────────────────
-   VIDEO SCRUB (efecto Apple scroll)
-   En móvil: vídeo en bucle normal
-   En escritorio: fotograma a fotograma con scroll
+   HERO VIDEO — bucle normal (sin efecto scroll)
 ────────────────────────────────────────────── */
-function initVideoScrub() {
-  const canvas   = document.getElementById('hero-canvas');
+function initHeroVideo() {
   const fallback = document.getElementById('hero-fallback');
-  const isMobile = window.innerWidth < 768;
+  const hero     = document.getElementById('hero');
 
-  /* MÓVIL — vídeo en bucle como fondo */
-  if (isMobile) {
-    const v = document.createElement('video');
-    v.muted = true; v.playsInline = true; v.autoplay = true; v.loop = true;
-    v.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;';
-    v.addEventListener('canplay', () => {
-      fallback.style.display = 'none';
-      document.getElementById('hero').insertBefore(v, fallback);
-    });
-    v.src = 'assets/hero.mp4';
-    return;
-  }
+  const v = document.createElement('video');
+  v.muted = true; v.playsInline = true; v.autoplay = true; v.loop = true;
+  v.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;';
 
-  /* ESCRITORIO — scrub fotograma a fotograma */
-  const ctx = canvas.getContext('2d');
+  v.addEventListener('canplay', () => { fallback.style.display = 'none'; });
+  v.addEventListener('error',   () => { fallback.style.display = 'block'; });
 
-  function resize() {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
-  const video = document.createElement('video');
-  video.muted = true; video.playsInline = true; video.preload = 'auto';
-
-  let ready = false;
-
-  video.addEventListener('loadedmetadata', () => {
-    resize();
-    fallback.style.display = 'none';
-    canvas.style.display   = 'block';
-    ready = true;
-    video.currentTime = 0;
-
-    ScrollTrigger.create({
-      trigger : '#hero',
-      start   : 'top top',
-      end     : '+=250%',
-      pin     : true,
-      scrub   : 1.2,
-      onUpdate(self) {
-        if (video.duration) {
-          const t = self.progress * video.duration;
-          if (Math.abs(video.currentTime - t) > 0.033) video.currentTime = t;
-        }
-      }
-    });
-  });
-
-  video.addEventListener('seeked', () => {
-    if (ready) ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-  });
-
-  video.addEventListener('error', () => {
-    canvas.style.display   = 'none';
-    fallback.style.display = 'block';
-  });
-
-  video.src = 'assets/hero.mp4';
-  window.addEventListener('resize', () => {
-    resize();
-    if (ready) ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-  });
+  v.src = 'assets/hero.mp4';
+  hero.insertBefore(v, fallback);
 }
 
 /* ──────────────────────────────────────────────
@@ -678,7 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSakura();
   initLoader();
   initNavbar();
-  initVideoScrub();
+  initHeroVideo();
   renderCatalog();
   initProductModal();
   initScrollAnimations();

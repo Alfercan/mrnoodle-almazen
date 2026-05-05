@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mr. Noodle AlmaZen · Asian Food & Take Away en el centro de Granada. Noodles frescos, dumplings y ramen artesanal.">
   <title>Mr. Noodle AlmaZen · Asian Food & Take Away · Granada</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="es_ES">
+  <meta property="og:url"         content="https://mrnoodle-almazen.vercel.app/">
+  <meta property="og:site_name"   content="Mr. Noodle AlmaZen">
+  <meta property="og:title"       content="Mr. Noodle AlmaZen · Asian Food & Take Away · Granada">
+  <meta property="og:description" content="Auténtica gastronomía oriental en el corazón de Granada. Noodles frescos, dumplings, ramen artesanal, snacks japoneses y menaje asiático.">
+  <meta property="og:image"       content="https://mrnoodle-almazen.vercel.app/assets/tienda.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"   content="Mr. Noodle AlmaZen — Asian Food & Take Away Granada">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Mr. Noodle AlmaZen · Asian Food & Take Away · Granada">
+  <meta name="twitter:description" content="Auténtica gastronomía oriental en el corazón de Granada.">
+  <meta name="twitter:image"       content="https://mrnoodle-almazen.vercel.app/assets/tienda.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -33,6 +51,7 @@
       <li><a href="#concepto">Nosotros</a></li>
       <li><a href="#tienda">Tienda</a></li>
       <li><a href="#kasazen">KasaZen</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
       <li><a href="#instagram">Instagram</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
@@ -44,7 +63,6 @@
 
   <!-- ── HERO ── -->
   <section id="hero">
-    <canvas id="hero-canvas"></canvas>
     <div id="hero-fallback" class="hero-video-fallback"></div>
     <div class="hero-circle" aria-hidden="true"></div>
     <div class="hero-content">
@@ -146,7 +164,7 @@
 
       <div class="tienda-cta">
         <p>¿No encuentras lo que buscas? Contáctanos o visítanos en Calle Campo Verde, 3 · Granada.</p>
-        <a href="tel:668514054" class="btn-primary">Llamar · 668 514 054</a>
+        <a href="https://wa.me/34668514054" target="_blank" rel="noopener" class="btn-primary">WhatsApp · 668 514 054</a>
         <a href="tel:668514054" class="btn-ghost">Llamar · 668 514 054</a>
       </div>
     </div>
@@ -202,6 +220,98 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ── RESEÑAS ── -->
+  <section id="resenas" class="section section-ink">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag-red">Opiniones</span>
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="resenas-global">
+          <span class="resenas-score">4.8</span>
+          <div class="resenas-stars-big">
+            <span class="rstar">★</span><span class="rstar">★</span><span class="rstar">★</span><span class="rstar">★</span><span class="rstar">★</span>
+          </div>
+          <a href="https://maps.google.com/?q=Mr+Noodle+AlmaZen+Calle+Campo+Verde+3+Granada" target="_blank" rel="noopener" class="resenas-google-link">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Reseñas en Google
+          </a>
+        </div>
+      </div>
+
+      <div class="resenas-grid">
+
+        <article class="resena-card">
+          <div class="resena-header">
+            <div class="resena-avatar">A</div>
+            <div class="resena-meta">
+              <span class="resena-nombre"><!-- Nombre del cliente --></span>
+              <span class="resena-fecha"><!-- Fecha --></span>
+            </div>
+            <div class="resena-google-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+          </div>
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-texto"><!-- Texto de la reseña --></p>
+        </article>
+
+        <article class="resena-card">
+          <div class="resena-header">
+            <div class="resena-avatar">M</div>
+            <div class="resena-meta">
+              <span class="resena-nombre"><!-- Nombre del cliente --></span>
+              <span class="resena-fecha"><!-- Fecha --></span>
+            </div>
+            <div class="resena-google-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+          </div>
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-texto"><!-- Texto de la reseña --></p>
+        </article>
+
+        <article class="resena-card">
+          <div class="resena-header">
+            <div class="resena-avatar">J</div>
+            <div class="resena-meta">
+              <span class="resena-nombre"><!-- Nombre del cliente --></span>
+              <span class="resena-fecha"><!-- Fecha --></span>
+            </div>
+            <div class="resena-google-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+          </div>
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-texto"><!-- Texto de la reseña --></p>
+        </article>
+
+        <article class="resena-card">
+          <div class="resena-header">
+            <div class="resena-avatar">L</div>
+            <div class="resena-meta">
+              <span class="resena-nombre"><!-- Nombre del cliente --></span>
+              <span class="resena-fecha"><!-- Fecha --></span>
+            </div>
+            <div class="resena-google-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+          </div>
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-texto"><!-- Texto de la reseña --></p>
+        </article>
+
+      </div>
+
+      <div class="resenas-cta">
+        <a href="https://maps.google.com/?q=Mr+Noodle+AlmaZen+Calle+Campo+Verde+3+Granada" target="_blank" rel="noopener" class="btn-ghost">
+          Ver todas las reseñas en Google
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -343,6 +453,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- ── WHATSAPP FLOTANTE ── -->
+  <a href="https://wa.me/34668514054?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20un%20pedido" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.116 1.516 5.845L.057 23.743a.75.75 0 0 0 .913.906l5.998-1.44A11.935 11.935 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.853 0-3.593-.5-5.096-1.374l-.364-.214-3.78.907.924-3.671-.236-.378A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
