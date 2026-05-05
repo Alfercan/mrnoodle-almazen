@@ -676,13 +676,35 @@ function initResenasCarousel() {
     nextBtn.disabled = current === cards.length - 1;
   }
 
+  let animating = false;
+
   function goTo(n) {
-    cards[current].classList.remove('active');
+    if (animating || n === current) return;
+    animating = true;
+
+    const dir     = n > current ? 1 : -1;
+    const outAnim = dir > 0 ? 'slideOutLeft 0.22s ease forwards' : 'slideOutRight 0.22s ease forwards';
+    const inAnim  = dir > 0 ? 'slideInRight 0.38s cubic-bezier(0.16,1,0.3,1) forwards' : 'slideInLeft 0.38s cubic-bezier(0.16,1,0.3,1) forwards';
+
+    const outCard = cards[current];
+    outCard.style.animation = outAnim;
+
     dotsWrap.children[current].classList.remove('active');
-    current = n;
-    cards[current].classList.add('active');
-    dotsWrap.children[current].classList.add('active');
-    updateBtns();
+
+    setTimeout(() => {
+      outCard.classList.remove('active');
+      outCard.style.animation = '';
+      current = n;
+      const inCard = cards[current];
+      inCard.style.animation = inAnim;
+      inCard.classList.add('active');
+      dotsWrap.children[current].classList.add('active');
+      updateBtns();
+      setTimeout(() => {
+        inCard.style.animation = '';
+        animating = false;
+      }, 400);
+    }, 200);
   }
 
   prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
