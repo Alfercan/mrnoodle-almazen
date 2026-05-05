@@ -25,13 +25,19 @@
   --ease-in:   cubic-bezier(0.7, 0, 0.84, 0);
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 body {
   font-family: var(--font-sans);
   background: var(--ink);
   color: var(--text);
   overflow-x: hidden;
+  max-width: 100%;
   line-height: 1.6;
 }
 
@@ -1477,13 +1483,14 @@ footer {
     color: var(--cream);
   }
 
-  .container   { padding: 0 1.25rem; }
-  .section     { padding: 4rem 0; }
+  .container   { padding: 0 1.25rem; max-width: 100%; }
+  .section     { padding: 4rem 0; overflow: hidden; }
   .section-head { margin-bottom: 2.5rem; }
 
   /* Hero */
   .hero-content { padding: 6rem 1.25rem 3rem; }
-  .hero-char    { opacity: 0.15; right: 0; width: 60vw; }
+  .hero-char    { display: none; }
+  .hero-circle  { display: none; }
   .hero-title   { font-size: clamp(2.75rem, 13vw, 4.5rem); }
   .hero-btns    { flex-direction: column; }
   .hero-btns .btn-primary, .hero-btns .btn-ghost { width: 100%; justify-content: center; }
@@ -1491,14 +1498,15 @@ footer {
 
   /* Concepto */
   .concepto-pillars { gap: 1.25rem; }
-  .concepto-badge   { bottom: -1rem; right: -1rem; width: 90px; height: 90px; }
+  .concepto-badge   { display: none; }
+  .concepto-img-wrap { overflow: hidden; }
 
   /* Carta / Productos */
   .carta-grid      { grid-template-columns: repeat(2, 1fr); }
   .prod-grid       { grid-template-columns: repeat(2, 1fr); }
   .prod-img        { height: 120px; }
   .gato-banner     { flex-direction: column; text-align: center; gap: 1rem; }
-  .gato-banner img { height: 60px; }
+  .gato-banner img { height: 60px; max-width: 100%; }
   .personajes-grid { grid-template-columns: repeat(2, 1fr); }
 
   /* Tienda CTA */
@@ -1506,11 +1514,14 @@ footer {
   .tienda-cta .btn-ghost { width: 100%; justify-content: center; }
 
   /* KasaZen */
-  .kasazen-float { top: -1rem; right: -1rem; width: 80px; height: 80px; }
-  .kasazen-gatos img { height: 60px; }
+  .kasazen-float { display: none; }
+  .kasazen-visual { overflow: hidden; }
+  .kasazen-gatos  { flex-wrap: wrap; justify-content: center; }
+  .kasazen-gatos img { height: 60px; width: auto; max-width: 30%; }
 
   /* Reseñas */
   .resenas-grid { grid-template-columns: 1fr 1fr; }
+  .resenas-global { gap: 0.75rem; }
 
   /* Instagram */
   .insta-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1533,8 +1544,6 @@ footer {
   .hero-content { padding: 5.5rem 1rem 2.5rem; }
   .hero-title   { font-size: clamp(2.5rem, 14vw, 3.5rem); }
   .hero-desc    { font-size: 0.875rem; }
-  .hero-circle  { display: none; }
-
   /* Productos */
   .prod-grid  { grid-template-columns: repeat(2, 1fr); gap: 0.625rem; }
   .prod-img   { height: 100px; padding: 0.5rem; }
@@ -1552,13 +1561,9 @@ footer {
   /* Mapa */
   .contacto-map { height: 240px; }
 
-  /* KasaZen */
-  .kasazen-float { display: none; }
+  /* KasaZen gatos */
   .kasazen-gatos { gap: 0.5rem; }
   .kasazen-gatos img { height: 52px; }
-
-  /* Concepto badge */
-  .concepto-badge { display: none; }
 
   /* Marquee */
   .marquee-track { font-size: 0.75rem; gap: 1rem; }
