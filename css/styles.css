@@ -1621,7 +1621,7 @@ footer {
 
 .resenas-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 3rem;
 }
@@ -1699,6 +1699,10 @@ footer {
   line-height: 1.7;
   font-weight: 300;
   flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .resenas-cta {
