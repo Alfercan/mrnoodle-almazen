@@ -132,7 +132,8 @@ function initNavbar() {
    SCROLL ANIMATIONS
 ────────────────────────────────────────────── */
 function initScrollAnimations() {
-  const mob = window.innerWidth < 768;
+  /* En móvil no hay animaciones de scroll: evita cualquier translateX/Y que genere overflow */
+  if (window.innerWidth < 768) return;
 
   /* Concepto */
   gsap.from('.concepto-text', {
