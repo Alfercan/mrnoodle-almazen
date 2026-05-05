@@ -1519,26 +1519,31 @@ footer {
   .kasazen-gatos  { flex-wrap: wrap; justify-content: center; }
   .kasazen-gatos img { height: 60px; width: auto; max-width: 30%; }
 
-  /* Reseñas — carousel horizontal contenido */
+  /* Reseñas — carousel de páginas de 3, todo contenido */
   .resenas-grid {
     display: flex;
-    flex-direction: row;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    gap: 1rem;
-    padding-bottom: 0.5rem;
-    /* Sin margin negativo — todo dentro del contenedor */
+    gap: 0;
+    padding-bottom: 0.75rem;
   }
   .resenas-grid::-webkit-scrollbar { display: none; }
-  .resena-card {
-    min-width: calc(100vw - 4rem);
+  /* Cada página ocupa exactamente el 100% del contenedor */
+  .resenas-page {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    width: 100%;
     flex-shrink: 0;
+    gap: 0.875rem;
     scroll-snap-align: start;
-    transform: none !important; /* Bloquea cualquier translateX de GSAP */
+    padding: 0 0.125rem;
   }
+  /* Las cards dentro del carousel ocupan el ancho completo */
+  .resena-card { width: 100%; }
   .resenas-global { gap: 0.75rem; }
 
   /* Instagram */
@@ -1642,6 +1647,9 @@ footer {
   background: rgba(66,133,244,0.08);
 }
 
+/* En desktop las páginas son transparentes — las cards van al grid directamente */
+.resenas-page { display: contents; }
+
 .resenas-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1722,10 +1730,6 @@ footer {
   line-height: 1.7;
   font-weight: 300;
   flex: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .resenas-cta {
