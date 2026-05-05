@@ -1531,8 +1531,13 @@ footer {
 
   /* Reseñas — carousel JS */
   .resenas-grid    { display: block; }
-  .resenas-page    { display: none; flex-direction: column; gap: 0.875rem; }
-  .resenas-page.active { display: flex; animation: pageIn 0.35s ease; }
+  .resenas-page    { display: none; }
+  .resenas-page.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    animation: pageIn 0.35s ease;
+  }
   .resena-card     { width: 100%; }
   /* Dots visibles en móvil */
   .resenas-dots    { display: flex; }
@@ -1642,9 +1647,10 @@ footer {
 }
 
 /* Desktop: páginas transparentes → las cards van al grid directamente */
-.resenas-page { display: contents; }
-/* Dots ocultos en desktop */
-.resenas-dots { display: none; }
+@media (min-width: 769px) {
+  .resenas-page { display: contents; }
+  .resenas-dots { display: none; }
+}
 
 @keyframes pageIn {
   from { opacity: 0; transform: translateY(10px); }
