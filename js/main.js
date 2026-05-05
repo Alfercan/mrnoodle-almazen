@@ -132,15 +132,16 @@ function initNavbar() {
    SCROLL ANIMATIONS
 ────────────────────────────────────────────── */
 function initScrollAnimations() {
+  const mob = window.innerWidth < 768;
 
   /* Concepto */
   gsap.from('.concepto-text', {
     scrollTrigger: { trigger: '.concepto-text', start: 'top 82%' },
-    opacity: 0, x: -50, duration: 1, ease: 'power3.out'
+    opacity: 0, x: mob ? 0 : -50, duration: 1, ease: 'power3.out'
   });
   gsap.from('.concepto-visual', {
     scrollTrigger: { trigger: '.concepto-visual', start: 'top 82%' },
-    opacity: 0, x: 50, duration: 1, ease: 'power3.out'
+    opacity: 0, x: mob ? 0 : 50, duration: 1, ease: 'power3.out'
   });
   gsap.from('.pillar', {
     scrollTrigger: { trigger: '.concepto-pillars', start: 'top 88%' },
@@ -161,15 +162,15 @@ function initScrollAnimations() {
   /* KasaZen */
   gsap.from('.kasazen-text', {
     scrollTrigger: { trigger: '#kasazen', start: 'top 80%' },
-    opacity: 0, x: -50, duration: 1, ease: 'power3.out'
+    opacity: 0, x: mob ? 0 : -50, duration: 1, ease: 'power3.out'
   });
   gsap.from('.kasazen-visual', {
     scrollTrigger: { trigger: '#kasazen', start: 'top 80%' },
-    opacity: 0, x: 50, duration: 1, delay: 0.15, ease: 'power3.out'
+    opacity: 0, x: mob ? 0 : 50, duration: 1, delay: 0.15, ease: 'power3.out'
   });
   gsap.from('.kasazen-list li', {
     scrollTrigger: { trigger: '.kasazen-list', start: 'top 85%' },
-    opacity: 0, x: -20, duration: 0.6, stagger: 0.1, ease: 'power3.out'
+    opacity: 0, x: mob ? 0 : -20, duration: 0.6, stagger: 0.1, ease: 'power3.out'
   });
 
   /* Personajes */
@@ -201,11 +202,11 @@ function initScrollAnimations() {
   /* Contacto */
   gsap.from('.cinfo-item', {
     scrollTrigger: { trigger: '.contacto-grid', start: 'top 82%' },
-    opacity: 0, x: -30, duration: 0.7, stagger: 0.1, ease: 'power3.out'
+    opacity: 0, x: mob ? 0 : -30, duration: 0.7, stagger: 0.1, ease: 'power3.out'
   });
   gsap.from('.contacto-map', {
     scrollTrigger: { trigger: '.contacto-map', start: 'top 85%' },
-    opacity: 0, x: 40, duration: 1, ease: 'power3.out'
+    opacity: 0, x: mob ? 0 : 40, duration: 1, ease: 'power3.out'
   });
 }
 
