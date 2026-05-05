@@ -628,6 +628,67 @@ function initSmoothLinks() {
 }
 
 /* ──────────────────────────────────────────────
+   CAROUSEL RESEÑAS (solo móvil)
+   Muestra 1 página de 3 reseñas, swipe para pasar
+────────────────────────────────────────────── */
+function initResenasCarousel() {
+  if (window.innerWidth >= 768) return;
+
+  const pages = Array.from(document.querySelectorAll('.resenas-page'));
+  if (pages.length < 2) return;
+
+  let current = 0;
+
+  /* Activar primera página */
+  pages[0].classList.add('active');
+
+  /* Crear dots */
+  const dotsWrap = document.createElement('div');
+  dotsWrap.className = 'resenas-dots';
+  pages.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'resenas-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Página ' + (i + 1));
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
+  });
+  document.querySelector('.resenas-grid').after(dotsWrap);
+
+  function goTo(n) {
+    pages[current].classList.remove('active');
+    dotsWrap.children[current].classList.remove('active');
+    current = n;
+    pages[current].classList.add('active');
+    dotsWrap.children[current].classList.add('active');
+  }
+
+  /* Detección de swipe táctil */
+  let startX = 0, startY = 0, moved = false;
+  const grid = document.querySelector('.resenas-grid');
+
+  grid.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    moved = false;
+  }, { passive: true });
+
+  grid.addEventListener('touchmove', e => {
+    moved = true;
+  }, { passive: true });
+
+  grid.addEventListener('touchend', e => {
+    if (!moved) return;
+    const dx = startX - e.changedTouches[0].clientX;
+    const dy = Math.abs(startY - e.changedTouches[0].clientY);
+    /* Solo swipe horizontal limpio (no scroll vertical) */
+    if (Math.abs(dx) > 45 && Math.abs(dx) > dy) {
+      if (dx > 0 && current < pages.length - 1) goTo(current + 1);
+      if (dx < 0 && current > 0) goTo(current - 1);
+    }
+  }, { passive: true });
+}
+
+/* ──────────────────────────────────────────────
    INIT
 ────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
@@ -641,4 +702,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initHeroParallax();
   initSmoothLinks();
+  initResenasCarousel();
 });
